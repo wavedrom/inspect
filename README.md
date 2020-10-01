@@ -1,2 +1,1 @@
-# inspect
-design hierarchy inspector React component
+HDL design hierarchy inspector. React component.
