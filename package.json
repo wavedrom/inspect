@@ -1,0 +1,41 @@
+{
+  "name": "inspect",
+  "version": "0.1.0",
+  "description": "HDL design hierarchy inspector. React component.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint lib test && nyc -r=text -r=lcov mocha test",
+    "build-zoo": "browserify src/app-zoo.js -o demo/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavedrom/inspect.git"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "author": "Aliaksei Chapyzhenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wavedrom/inspect/issues"
+  },
+  "homepage": "https://github.com/wavedrom/inspect#readme",
+  "devDependencies": {
+    "@drom/eslint-config": "^0.10.0",
+    "browserify": "^16.2.3",
+    "chai": "^4.1.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^7.1.0",
+    "http-server": "^0.12.1",
+    "immutability-helper": "^3.0.0",
+    "jsof": "^0.3.0",
+    "mocha": "^8.1.3",
+    "nyc": "^15.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {},
+  "eslintConfig": {
+    "extends": "@drom/eslint-config/eslint4/node8"
+  }
+}
