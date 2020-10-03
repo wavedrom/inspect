@@ -5,9 +5,6 @@ const ReactDOM = require('react-dom');
 
 const reEl = require('../lib/re-el.js');
 
-const $ = React.createElement;
-// const {useState} = React;
-
 const zooData = {
   type: 'module', name: 'foo',
   vars: [
@@ -28,6 +25,7 @@ const zooData = {
   }]
 };
 
+const $ = React.createElement;
 const El = reEl(React);
 
 function App (props) {
