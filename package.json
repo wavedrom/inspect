@@ -1,8 +1,8 @@
 {
-  "name": "inspect",
+  "name": "@wavedrom/inspect",
   "version": "0.1.0",
   "description": "HDL design hierarchy inspector. React component.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "eslint lib bin src test && nyc -r=text -r=lcov mocha test",
     "build-demo": "browserify src/app-demo.js -o demo/bundle.js"

@@ -17,7 +17,9 @@ const extract = ml => {
     enter: (n) => {
       if (n.name === 'cell') {
         const branch = {
-          type: 'module', name: n.attr.name
+          type: 'module',
+          name: n.attr.name,
+          mname: n.attr.submodname
         };
         stack.push(branch);
       }
