@@ -40,7 +40,7 @@ const main = async () => {
   const xml = await fs.readFile(argv.input, 'utf8');
   const ml = onml.parse(xml);
   const obj = extract(ml);
-  console.log(JSON.stringify(obj[0].scopes[0], null, 2));
+  console.log(JSON.stringify(obj[0].scopes[0], null, 2)); /* eslint no-console: 0 */
 };
 
 main();
