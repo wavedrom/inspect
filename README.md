@@ -11,6 +11,8 @@ Inspired by [React Dev Tools](https://reactjs.org/blog/2019/08/15/new-react-devt
 npm i @wavedrom/inspect
 ```
 
+### with React
+
 ```js
 const React = require('react');
 const inspect = require('@wavedrom/inspect');
