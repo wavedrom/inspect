@@ -42,10 +42,13 @@
   },
   "dependencies": {},
   "eslintConfig": {
-    "extends": "@drom/eslint-config/eslint4/node8"
+    "extends": "@drom/eslint-config/eslint4/node8",
+    "parserOptions": {
+      "ecmaVersion": 2020
+    }
   },
   "bin": {
-    "inspect": "xml2json.js"
+    "xml2json": "./bin/xml2json.js"
   },
   "directories": {
     "lib": "lib",
