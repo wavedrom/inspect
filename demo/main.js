@@ -53,6 +53,7 @@ const inspectableReport = report => {
 
 global.Hier = async (divName, inpName, hierURL) => {
 
+  let t0;
   const content = (typeof divName === 'string')
     ? document.getElementById(divName)
     : divName;
@@ -61,22 +62,29 @@ global.Hier = async (divName, inpName, hierURL) => {
     ? document.getElementById(inpName)
     : inpName;
 
+  t0 = Date.now();
   const resp = await fetch(hierURL);
+  console.log('fetch: ' + (Date.now() - t0));
 
   if (resp.status !== 200) {
     content.innerHTML = hierURL + ' not found';
     return;
   }
 
+  t0 = Date.now();
   const obj = await resp.json();
+  console.log('json parse: ' + (Date.now() - t0));
+
   const flat = flatFromHier(obj);
 
+  t0 = Date.now();
   const fuser = new Fuse(flat, {
     keys: ['name', 'submodname', 'hier'],
     useExtendedSearch: true
   });
+  console.log('index: ' + (Date.now() - t0));
 
-  input.addEventListener('input', evnt => {
+  const onUpdate = evnt => {
     const str = evnt.target.value;
     const report = fuser.search(str, {limit: 100});
     const insp = inspectableReport(report);
@@ -84,9 +92,12 @@ global.Hier = async (divName, inpName, hierURL) => {
       $(App, insp),
       content
     );
-  });
+  };
+
+  input.addEventListener('input', onUpdate);
 
   input.focus();
+  onUpdate({target:{value: ''}});
 };
 
 /* eslint-env browser */
