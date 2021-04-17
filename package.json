@@ -23,7 +23,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "test": "eslint lib bin src test && nyc -r=text -r=lcov mocha test",
+    "test": "eslint lib bin test && nyc -r=text -r=lcov mocha test",
     "build": "browserify ./lib/main.js > demo/main.js",
     "watch": "watchify ./lib/main.js -o demo/main.js -v"
   },
