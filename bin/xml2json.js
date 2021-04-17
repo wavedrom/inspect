@@ -19,7 +19,8 @@ const extract = ml => {
         const branch = {
           type: 'module',
           name: n.attr.name,
-          mname: n.attr.submodname
+          submodname: n.attr.submodname,
+          hier: n.attr.hier
         };
         stack.push(branch);
       }
