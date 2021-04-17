@@ -1,0 +1,19 @@
+body {
+  --indentation-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  background: #222;
+  color: #3ce;
+}
+input {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Roboto Mono', monospace;
+}
+.spacer { fill: #888; }
+.module { color: #e74b4b; }
+.task { color: #9f5af0; }
+.wire { color: #ffb76a; }
+.reg { color: #74b6f2; }
+.comment { color: #4f4f4f; }
