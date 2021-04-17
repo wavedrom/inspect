@@ -1,0 +1,82 @@
+{
+  "type": "module",
+  "name": "serv_rf_top",
+  "submodname": "serv_rf_top",
+  "hier": "serv_rf_top",
+  "scopes": [
+    {
+      "type": "module",
+      "name": "rf_ram_if",
+      "submodname": "serv_rf_ram_if__W2",
+      "hier": "serv_rf_top.rf_ram_if"
+    },
+    {
+      "type": "module",
+      "name": "rf_ram",
+      "submodname": "serv_rf_ram__W2",
+      "hier": "serv_rf_top.rf_ram"
+    },
+    {
+      "type": "module",
+      "name": "cpu",
+      "submodname": "serv_top",
+      "hier": "serv_rf_top.cpu",
+      "scopes": [
+        {
+          "type": "module",
+          "name": "state",
+          "submodname": "serv_state",
+          "hier": "serv_rf_top.cpu.state"
+        },
+        {
+          "type": "module",
+          "name": "decode",
+          "submodname": "serv_decode",
+          "hier": "serv_rf_top.cpu.decode"
+        },
+        {
+          "type": "module",
+          "name": "immdec",
+          "submodname": "serv_immdec",
+          "hier": "serv_rf_top.cpu.immdec"
+        },
+        {
+          "type": "module",
+          "name": "bufreg",
+          "submodname": "serv_bufreg",
+          "hier": "serv_rf_top.cpu.bufreg"
+        },
+        {
+          "type": "module",
+          "name": "ctrl",
+          "submodname": "serv_ctrl",
+          "hier": "serv_rf_top.cpu.ctrl"
+        },
+        {
+          "type": "module",
+          "name": "alu",
+          "submodname": "serv_alu",
+          "hier": "serv_rf_top.cpu.alu"
+        },
+        {
+          "type": "module",
+          "name": "rf_if",
+          "submodname": "serv_rf_if",
+          "hier": "serv_rf_top.cpu.rf_if"
+        },
+        {
+          "type": "module",
+          "name": "mem_if",
+          "submodname": "serv_mem_if",
+          "hier": "serv_rf_top.cpu.mem_if"
+        },
+        {
+          "type": "module",
+          "name": "csr",
+          "submodname": "serv_csr",
+          "hier": "serv_rf_top.cpu.csr"
+        }
+      ]
+    }
+  ]
+}
